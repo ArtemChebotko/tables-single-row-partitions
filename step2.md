@@ -6,7 +6,7 @@
 
 To create a table, Cassandra Query Language has the `CREATE TABLE` statement with the following simplified syntax:
 
-<code><pre>
+<pre style="color: #a31516">
 CREATE TABLE [ IF NOT EXISTS ] [keyspace_name.]table_name
 ( 
   column_name data_type [ , ... ] 
@@ -18,7 +18,7 @@ CREATE TABLE [ IF NOT EXISTS ] [keyspace_name.]table_name
 [ WITH CLUSTERING ORDER BY 
    ( clustering_key_column_name ASC|DESC [ , ... ] )
 ];
-</pre></code>
+</pre>
 
 First, notice that a table is created within an existing keyspace. If a *keyspace name* is omitted, the current working keyspace is used.
 
