@@ -4,20 +4,58 @@
 ### [◂](command:katapod.loadPage?step5){.steps} Step 6 of 9 [▸](command:katapod.loadPage?step7){.steps}
 </div>
 
-Add the row into our table using the CQL `INSERT` statement:
-```
-INSERT INTO users (email, name, age, date_joined) 
-VALUES ('joe@datastax.com', 'Joe', 25, '2020-01-01');
-```
+Our next table will store information about movie genres as shown below. This table 
+with *single-row partitions* and a *simple partition key* is for you to define.
 
-Insert another row into the table:
+| genre     | description |
+|-----------|-------------|
+| Adventure |  A story about a protagonist who journeys to epic or distant places to accomplish something. |
+| Fantasy   |  A story about magic or supernatural forces. | 
 
+Create the table:
 <details>
-  <summary>Solution</summary> 
+  <summary>Solution</summary>
 
 ```
-INSERT INTO users (email, name, age, date_joined) 
-VALUES ('jen@datastax.com', 'Jen', 27, '2020-01-01');
+CREATE TABLE genres (
+  genre TEXT,
+  description TEXT,
+  PRIMARY KEY ((genre))
+);
+```
+
+</details>
+
+Insert the rows:
+<details>
+  <summary>Solution</summary>
+
+```
+INSERT INTO genres (genre, description) 
+VALUES ('Adventure', 'A story about a protagonist who journeys to epic or distant places to accomplish something.');
+INSERT INTO genres (genre, description) 
+VALUES ('Fantasy', 'A story about magic or supernatural forces.');
+```
+
+</details>
+
+Q1. Retrieve one row:
+<details>
+  <summary>Solution</summary>
+
+```
+SELECT * FROM genres
+WHERE genre = 'Fantasy';
+```
+
+</details>
+
+Q2. Retrieve all rows:
+<details>
+  <summary>Solution</summary>
+
+```
+SELECT * FROM genres;
 ```
 
 </details>
