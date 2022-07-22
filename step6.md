@@ -1,6 +1,6 @@
 <div class="top">
 
-# Create table `genres`
+# Create table "genres"
 ### [◂](command:katapod.loadPage?step5){.steps} Step 6 of 9 [▸](command:katapod.loadPage?step7){.steps}
 </div>
 

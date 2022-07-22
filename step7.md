@@ -1,6 +1,6 @@
 <div class="top">
 
-# Create table `actors`
+# Create table "actors"
 ### [◂](command:katapod.loadPage?step6){.steps} Step 7 of 9 [▸](command:katapod.loadPage?step8){.steps}
 </div>
 
